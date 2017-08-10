@@ -54,14 +54,14 @@ class Digraph(object):
             raise ValueError('Duplicate node.')
         else:
             self.nodes.append(node)
-            self.edges[node] = []
+            self.edges[node] = [] # modify dictionary
 
     def add_edge(self, edge):
         src = edge.get_source()
         dest = edge.get_destination()
         if not (src in self.nodes and dest in self.nodes):
             raise ValueError('Node not in graph.')
-        self.edges[src].append(dest)
+        self.edges[src].append((dest, edge.get_weight()))
 
     def children_of(self, node):
         return self.edges[node]
