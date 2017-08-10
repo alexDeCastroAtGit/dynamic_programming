@@ -30,6 +30,7 @@ def depth_first_search(graph, start, end, path, shortest, to_print=False):
     Assumes graph is a digraph; start and end are nodes;
     path and shortest are lists of nodes.
     Returns a shortest path from start to end in graph.
+    Algorithm implementation is tail recursive.
     """
     # path += [start]
     path = path + [start]
