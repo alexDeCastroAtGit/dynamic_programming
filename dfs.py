@@ -15,10 +15,10 @@ def wt_len(path, graph):  # recursive?
     """Assumes path is a list of nodes and that path is a valid path in graph"""
     l = 0.0
     for first, second in zip(path, path[1:]):
-        first_children = graph.children_of(first)
+        first_edges = graph.children_of(first)
         # if end in start_children:
-        end_loc = [n for n, w in first_children].index(second)
-        weight = first_children[end_loc][1]
+        end_loc = [n for n, w in first_edges].index(second)
+        weight = first_edges[end_loc][1]
         l += weight
     # wt_len = graph.edges[n]
     # pass
