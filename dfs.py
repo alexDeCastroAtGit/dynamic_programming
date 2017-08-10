@@ -12,7 +12,10 @@ def print_path(path):
 
 
 def wt_len(path, graph):  # recursive?
-    """Assumes path is a list of nodes and that path is a valid path in graph"""
+    """
+    Assumes path is a list of nodes and that path is a valid path in graph.
+    This function can be generalized.
+    """
     l = 0.0
     for first, second in zip(path, path[1:]):
         first_edges = graph.children_of(first)
